@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Alundra.png-ae87db00d57476076e567eaaad3d2242.stex"
+path="res://.import/Alundra_esquerda_parado8.png-06b529bfbddbb9b164cce038ad7a3207.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Alundra.png"
-dest_files=[ "res://.import/Alundra.png-ae87db00d57476076e567eaaad3d2242.stex" ]
+source_file="res://player/sprites/Esquerda/Alundra_esquerda_parado8.png"
+dest_files=[ "res://.import/Alundra_esquerda_parado8.png-06b529bfbddbb9b164cce038ad7a3207.stex" ]
 
 [params]
 

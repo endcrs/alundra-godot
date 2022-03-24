@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/Alundra_esquerda_parado2.png-b901d205cd333269b8dc707dd6b00ba3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://player/sprites/Esquerda/Alundra_esquerda_parado2.png"
+dest_files=[ "res://.import/Alundra_esquerda_parado2.png-b901d205cd333269b8dc707dd6b00ba3.stex" ]
 
 [params]
 
