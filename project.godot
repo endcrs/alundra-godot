@@ -1,0 +1,44 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Node25D",
+"language": "GDScript",
+"path": "res://addons/node25d/node_25d.gd"
+}, {
+"base": "KinematicBody",
+"class": "ShadowMath25D",
+"language": "GDScript",
+"path": "res://addons/node25d/shadow_math_25d.gd"
+}, {
+"base": "Node",
+"class": "YSort25D",
+"language": "GDScript",
+"path": "res://addons/node25d/y_sort_25d.gd"
+} ]
+_global_script_class_icons={
+"Node25D": "res://addons/node25d/icons/node_25d_icon.png",
+"ShadowMath25D": "res://addons/node25d/icons/shadow_math_25d_icon.png",
+"YSort25D": "res://addons/node25d/icons/y_sort_25d_icon.png"
+}
+
+[application]
+
+config/name="AlundraGodot"
+config/icon="res://icon.png"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
