@@ -1,53 +1,88 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=93 format=2]
 
 [ext_resource path="res://player/scripts/Player.cs" type="Script" id=1]
-[ext_resource path="res://player/sprites/Tras/Alundra_tras_parado7.png" type="Texture" id=2]
-[ext_resource path="res://player/sprites/Tras/Alundra_tras_parado6.png" type="Texture" id=3]
-[ext_resource path="res://player/sprites/Esquerda/Alundra_esquerda_parado2.png" type="Texture" id=4]
-[ext_resource path="res://player/sprites/Direita/Alundra_direita_parado8.png" type="Texture" id=5]
-[ext_resource path="res://player/sprites/Direita/Alundra_direita_parado9.png" type="Texture" id=6]
-[ext_resource path="res://player/sprites/Tras/Alundra_tras_parado1.png" type="Texture" id=7]
-[ext_resource path="res://player/sprites/Esquerda/Alundra_esquerda_parado8.png" type="Texture" id=8]
-[ext_resource path="res://player/sprites/Frente/Alundra_Frente_Parado 5.png" type="Texture" id=9]
-[ext_resource path="res://player/sprites/Esquerda/Alundra_esquerda_parado3.png" type="Texture" id=10]
-[ext_resource path="res://player/sprites/Tras/Alundra_tras_parado5.png" type="Texture" id=11]
-[ext_resource path="res://player/sprites/Esquerda/Alundra_esquerda_parado4.png" type="Texture" id=12]
-[ext_resource path="res://player/sprites/Frente/Alundra_Frente_Parado 7.png" type="Texture" id=13]
-[ext_resource path="res://player/sprites/Frente/Alundra_Frente_Parado 9.png" type="Texture" id=14]
-[ext_resource path="res://player/sprites/Esquerda/Alundra_esquerda_parado5.png" type="Texture" id=15]
-[ext_resource path="res://player/sprites/Esquerda/Alundra_esquerda_parado1.png" type="Texture" id=16]
-[ext_resource path="res://player/sprites/Frente/Alundra_Frente_Parado 2.png" type="Texture" id=17]
-[ext_resource path="res://player/sprites/Direita/Alundra_direita_parado4.png" type="Texture" id=18]
-[ext_resource path="res://player/sprites/Esquerda/Alundra_esquerda_parado7.png" type="Texture" id=19]
-[ext_resource path="res://player/sprites/Direita/Alundra_direita_parado1.png" type="Texture" id=20]
-[ext_resource path="res://player/sprites/Frente/Alundra_Frente_Parado 1.png" type="Texture" id=21]
-[ext_resource path="res://player/sprites/Direita/Alundra_direita_parado3.png" type="Texture" id=22]
-[ext_resource path="res://player/sprites/Direita/Alundra_direita_parado6.png" type="Texture" id=23]
-[ext_resource path="res://player/sprites/Frente/Alundra_Frente_Parado 4.png" type="Texture" id=24]
-[ext_resource path="res://player/sprites/Direita/Alundra_direita_parado7.png" type="Texture" id=25]
-[ext_resource path="res://player/sprites/Tras/Alundra_tras_parado9.png" type="Texture" id=26]
-[ext_resource path="res://player/sprites/Esquerda/Alundra_esquerda_parado6.png" type="Texture" id=27]
-[ext_resource path="res://player/sprites/Esquerda/Alundra_esquerda_parado9.png" type="Texture" id=28]
-[ext_resource path="res://player/sprites/Tras/Alundra_tras_parado2.png" type="Texture" id=29]
-[ext_resource path="res://player/sprites/Tras/Alundra_tras_parado3.png" type="Texture" id=30]
-[ext_resource path="res://player/sprites/Tras/Alundra_tras_parado4.png" type="Texture" id=31]
-[ext_resource path="res://player/sprites/Frente/Alundra_Frente_Parado 8.png" type="Texture" id=32]
-[ext_resource path="res://player/sprites/Tras/Alundra_tras_parado8.png" type="Texture" id=33]
-[ext_resource path="res://player/sprites/Frente/Alundra_Frente_Parado 6.png" type="Texture" id=34]
-[ext_resource path="res://player/sprites/Frente/Alundra_Frente_Parado 3.png" type="Texture" id=35]
-[ext_resource path="res://player/sprites/Direita/Alundra_direita_parado5.png" type="Texture" id=36]
-[ext_resource path="res://player/sprites/Direita/Alundra_direita_parado2.png" type="Texture" id=37]
+[ext_resource path="res://player/sprites/IdleUp/idleUp7.png" type="Texture" id=2]
+[ext_resource path="res://player/sprites/IdleUp/idleUp6.png" type="Texture" id=3]
+[ext_resource path="res://player/sprites/IdleLeft/idleLeft2.png" type="Texture" id=4]
+[ext_resource path="res://player/sprites/IdleRight/idleRight8.png" type="Texture" id=5]
+[ext_resource path="res://player/sprites/IdleRight/idleRight9.png" type="Texture" id=6]
+[ext_resource path="res://player/sprites/IdleUp/idleUp1.png" type="Texture" id=7]
+[ext_resource path="res://player/sprites/IdleLeft/idleLeft8.png" type="Texture" id=8]
+[ext_resource path="res://player/sprites/IdleDown/idleDown5.png" type="Texture" id=9]
+[ext_resource path="res://player/sprites/IdleLeft/idleLeft3.png" type="Texture" id=10]
+[ext_resource path="res://player/sprites/IdleUp/idleUp5.png" type="Texture" id=11]
+[ext_resource path="res://player/sprites/IdleLeft/idleLeft4.png" type="Texture" id=12]
+[ext_resource path="res://player/sprites/IdleDown/idleDown7.png" type="Texture" id=13]
+[ext_resource path="res://player/sprites/IdleDown/idleDown9.png" type="Texture" id=14]
+[ext_resource path="res://player/sprites/IdleLeft/idleLeft5.png" type="Texture" id=15]
+[ext_resource path="res://player/sprites/IdleLeft/idleLeft1.png" type="Texture" id=16]
+[ext_resource path="res://player/sprites/IdleDown/idleDown2.png" type="Texture" id=17]
+[ext_resource path="res://player/sprites/IdleRight/idleRight4.png" type="Texture" id=18]
+[ext_resource path="res://player/sprites/IdleLeft/idleLeft7.png" type="Texture" id=19]
+[ext_resource path="res://player/sprites/IdleRight/idleRight1.png" type="Texture" id=20]
+[ext_resource path="res://player/sprites/IdleDown/idleDown1.png" type="Texture" id=21]
+[ext_resource path="res://player/sprites/IdleRight/idleRight3.png" type="Texture" id=22]
+[ext_resource path="res://player/sprites/IdleRight/idleRight6.png" type="Texture" id=23]
+[ext_resource path="res://player/sprites/IdleDown/idleDown4.png" type="Texture" id=24]
+[ext_resource path="res://player/sprites/IdleRight/idleRight7.png" type="Texture" id=25]
+[ext_resource path="res://player/sprites/IdleUp/idleUp9.png" type="Texture" id=26]
+[ext_resource path="res://player/sprites/IdleLeft/idleLeft6.png" type="Texture" id=27]
+[ext_resource path="res://player/sprites/IdleLeft/idleLeft9.png" type="Texture" id=28]
+[ext_resource path="res://player/sprites/IdleUp/idleUp2.png" type="Texture" id=29]
+[ext_resource path="res://player/sprites/IdleUp/idleUp3.png" type="Texture" id=30]
+[ext_resource path="res://player/sprites/IdleUp/idleUp4.png" type="Texture" id=31]
+[ext_resource path="res://player/sprites/IdleDown/idleDown8.png" type="Texture" id=32]
+[ext_resource path="res://player/sprites/IdleUp/idleUp8.png" type="Texture" id=33]
+[ext_resource path="res://player/sprites/IdleDown/idleDown6.png" type="Texture" id=34]
+[ext_resource path="res://player/sprites/IdleDown/idleDown3.png" type="Texture" id=35]
+[ext_resource path="res://player/sprites/IdleRight/idleRight5.png" type="Texture" id=36]
+[ext_resource path="res://player/sprites/IdleRight/idleRight2.png" type="Texture" id=37]
+[ext_resource path="res://player/sprites/WalkDown/walkDown1.png" type="Texture" id=38]
+[ext_resource path="res://player/sprites/WalkDown/walkDown2.png" type="Texture" id=39]
+[ext_resource path="res://player/sprites/WalkDown/walkDown4.png" type="Texture" id=40]
+[ext_resource path="res://player/sprites/WalkDown/walkDown3.png" type="Texture" id=41]
+[ext_resource path="res://player/sprites/WalkDown/walkDown5.png" type="Texture" id=42]
+[ext_resource path="res://player/sprites/WalkDown/walkDown6.png" type="Texture" id=43]
+[ext_resource path="res://player/sprites/WalkLeft/walkLeft3.png" type="Texture" id=44]
+[ext_resource path="res://player/sprites/WalkRight/walkRight3.png" type="Texture" id=45]
+[ext_resource path="res://player/sprites/WalkRight/walkRight2.png" type="Texture" id=46]
+[ext_resource path="res://player/sprites/WalkUp/walkUp1.png" type="Texture" id=47]
+[ext_resource path="res://player/sprites/WalkUp/walkUp6.png" type="Texture" id=48]
+[ext_resource path="res://player/sprites/WalkRight/walkRight1.png" type="Texture" id=49]
+[ext_resource path="res://player/sprites/WalkUp/walkUp5.png" type="Texture" id=50]
+[ext_resource path="res://player/sprites/WalkLeft/walkLeft1.png" type="Texture" id=51]
+[ext_resource path="res://player/sprites/WalkLeft/walkLeft4.png" type="Texture" id=52]
+[ext_resource path="res://player/sprites/WalkUp/walkUp4.png" type="Texture" id=53]
+[ext_resource path="res://player/sprites/WalkLeft/walkLeft2.png" type="Texture" id=54]
+[ext_resource path="res://player/sprites/WalkUp/walkUp2.png" type="Texture" id=55]
+[ext_resource path="res://player/sprites/WalkUp/walkUp3.png" type="Texture" id=56]
+[ext_resource path="res://player/sprites/WalkLeft/walkLeft5.png" type="Texture" id=57]
+[ext_resource path="res://player/sprites/WalkLeft/walkLeft6.png" type="Texture" id=58]
+[ext_resource path="res://player/sprites/WalkRight/walkRight4.png" type="Texture" id=59]
+[ext_resource path="res://player/sprites/WalkRight/walkRight5.png" type="Texture" id=60]
+[ext_resource path="res://player/sprites/WalkRight/walkRight6.png" type="Texture" id=61]
+[ext_resource path="res://player/sprites/shadow.png" type="Texture" id=62]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 49 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ) ],
+"loop": true,
+"name": "walk_right",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 33 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "idle_up",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 20 ), ExtResource( 37 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 36 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "idle_right",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 21 ), ExtResource( 17 ), ExtResource( 35 ), ExtResource( 24 ), ExtResource( 9 ), ExtResource( 34 ), ExtResource( 13 ), ExtResource( 32 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 47 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 50 ), ExtResource( 48 ) ],
 "loop": true,
-"name": "idle_up",
+"name": "walk_up",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 16 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 27 ), ExtResource( 19 ), ExtResource( 8 ), ExtResource( 28 ) ],
@@ -55,23 +90,290 @@ animations = [ {
 "name": "idle_left",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 33 ), ExtResource( 26 ) ],
+"frames": [ ExtResource( 21 ), ExtResource( 17 ), ExtResource( 35 ), ExtResource( 24 ), ExtResource( 9 ), ExtResource( 34 ), ExtResource( 13 ), ExtResource( 32 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "idle_down",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 38 ), ExtResource( 39 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 43 ) ],
+"loop": true,
+"name": "walk_down",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 51 ), ExtResource( 54 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 57 ), ExtResource( 58 ) ],
+"loop": true,
+"name": "walk_left",
+"speed": 10.0
 } ]
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 9.0
+[sub_resource type="RectangleShape2D" id=37]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 11, 2.5 )
+
+[sub_resource type="AnimationNodeAnimation" id=33]
+animation = "IdleLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=34]
+animation = "IdleRight"
+
+[sub_resource type="AnimationNodeAnimation" id=35]
+animation = "IdleDown"
+
+[sub_resource type="AnimationNodeAnimation" id=36]
+animation = "IdleUp"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=12]
+blend_point_0/node = SubResource( 33 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 34 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 35 )
+blend_point_2/pos = Vector2( 0, 1 )
+blend_point_3/node = SubResource( 36 )
+blend_point_3/pos = Vector2( 0, -0.9 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "WalkLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "WalkRight"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "WalkDown"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "WalkUp"
+
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "WalkUp"
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "WalkUp"
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "WalkDown"
+
+[sub_resource type="AnimationNodeAnimation" id=29]
+animation = "WalkDown"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=23]
+blend_point_0/node = SubResource( 19 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 20 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 21 )
+blend_point_2/pos = Vector2( 0, 1 )
+blend_point_3/node = SubResource( 22 )
+blend_point_3/pos = Vector2( 0, -1 )
+blend_point_4/node = SubResource( 26 )
+blend_point_4/pos = Vector2( -1, -1 )
+blend_point_5/node = SubResource( 27 )
+blend_point_5/pos = Vector2( 1, -1 )
+blend_point_6/node = SubResource( 28 )
+blend_point_6/pos = Vector2( -1, 1 )
+blend_point_7/node = SubResource( 29 )
+blend_point_7/pos = Vector2( 1, 1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+
+[sub_resource type="AnimationNodeStateMachine" id=13]
+states/Idle/node = SubResource( 12 )
+states/Idle/position = Vector2( 283, 87.9931 )
+states/Walk/node = SubResource( 23 )
+states/Walk/position = Vector2( 504.333, 87.8888 )
+transitions = [ "Idle", "Walk", SubResource( 24 ), "Walk", "Idle", SubResource( 25 ) ]
+start_node = "Idle"
+graph_offset = Vector2( -74, 24 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=14]
+
+[sub_resource type="Animation" id=3]
+resource_name = "IdleDown"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle_down" ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "IdleLeft"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle_left" ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "IdleRight"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle_right" ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "IdleUp"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle_up" ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "idle_down" ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "WalkDown"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk_down" ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "WalkLeft"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk_left" ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "WalkRight"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk_right" ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "WalkUp"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk_up" ]
+}
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
+[node name="ShadowSprite" type="Sprite" parent="."]
+texture = ExtResource( 62 )
+
+[node name="Alundra" type="KinematicBody2D" parent="."]
+
+[node name="AlundraSprite" type="AnimatedSprite" parent="Alundra"]
 frames = SubResource( 1 )
-animation = "idle_up"
-frame = 1
+animation = "idle_down"
+frame = 6
+playing = true
+offset = Vector2( 0, -20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Alundra"]
+position = Vector2( 0, -8 )
+shape = SubResource( 37 )
+disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 16 )
-shape = SubResource( 2 )
+position = Vector2( 0, 2.5 )
+shape = SubResource( 32 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 13 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 14 )
+parameters/Idle/blend_position = Vector2( 0, 0.1 )
+parameters/Walk/blend_position = Vector2( 0, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/IdleDown = SubResource( 3 )
+anims/IdleLeft = SubResource( 4 )
+anims/IdleRight = SubResource( 5 )
+anims/IdleUp = SubResource( 6 )
+anims/RESET = SubResource( 7 )
+anims/WalkDown = SubResource( 15 )
+anims/WalkLeft = SubResource( 16 )
+anims/WalkRight = SubResource( 17 )
+anims/WalkUp = SubResource( 18 )
