@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=2]
+[gd_scene load_steps=129 format=2]
 
 [ext_resource path="res://player/scripts/Player.cs" type="Script" id=1]
 [ext_resource path="res://player/sprites/IdleUp/idleUp7.png" type="Texture" id=2]
@@ -62,6 +62,18 @@
 [ext_resource path="res://player/sprites/WalkRight/walkRight5.png" type="Texture" id=60]
 [ext_resource path="res://player/sprites/WalkRight/walkRight6.png" type="Texture" id=61]
 [ext_resource path="res://player/sprites/shadow.png" type="Texture" id=62]
+[ext_resource path="res://player/sprites/JumpUp/jumpUp1.png" type="Texture" id=63]
+[ext_resource path="res://player/sprites/JumpRight/jumpRight1.png" type="Texture" id=64]
+[ext_resource path="res://player/sprites/JumpUp/jumpUp3.png" type="Texture" id=65]
+[ext_resource path="res://player/sprites/JumpDown/jumpDown1.png" type="Texture" id=66]
+[ext_resource path="res://player/sprites/JumpLeft/jumpLeft3.png" type="Texture" id=67]
+[ext_resource path="res://player/sprites/JumpDown/jumpDown2.png" type="Texture" id=68]
+[ext_resource path="res://player/sprites/JumpLeft/jumpLeft1.png" type="Texture" id=69]
+[ext_resource path="res://player/sprites/JumpLeft/jumpLeft2.png" type="Texture" id=70]
+[ext_resource path="res://player/sprites/JumpUp/jumpUp2.png" type="Texture" id=71]
+[ext_resource path="res://player/sprites/JumpRight/jumpRight3.png" type="Texture" id=72]
+[ext_resource path="res://player/sprites/JumpRight/jumpRight2.png" type="Texture" id=73]
+[ext_resource path="res://player/sprites/JumpDown/jumpDown3.png" type="Texture" id=74]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -70,29 +82,19 @@ animations = [ {
 "name": "walk_right",
 "speed": 10.0
 }, {
+"frames": [ ExtResource( 51 ), ExtResource( 54 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 57 ), ExtResource( 58 ) ],
+"loop": true,
+"name": "walk_left",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 66 ), ExtResource( 68 ), ExtResource( 74 ) ],
+"loop": false,
+"name": "jump_down",
+"speed": 15.0
+}, {
 "frames": [ ExtResource( 7 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 33 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "idle_up",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 20 ), ExtResource( 37 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 36 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "idle_right",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 47 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 50 ), ExtResource( 48 ) ],
-"loop": true,
-"name": "walk_up",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 16 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 27 ), ExtResource( 19 ), ExtResource( 8 ), ExtResource( 28 ) ],
-"loop": true,
-"name": "idle_left",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 21 ), ExtResource( 17 ), ExtResource( 35 ), ExtResource( 24 ), ExtResource( 9 ), ExtResource( 34 ), ExtResource( 13 ), ExtResource( 32 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "idle_down",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 38 ), ExtResource( 39 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 43 ) ],
@@ -100,17 +102,44 @@ animations = [ {
 "name": "walk_down",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 51 ), ExtResource( 54 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 57 ), ExtResource( 58 ) ],
+"frames": [ ExtResource( 47 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 50 ), ExtResource( 48 ) ],
 "loop": true,
-"name": "walk_left",
+"name": "walk_up",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 64 ), ExtResource( 73 ), ExtResource( 72 ) ],
+"loop": false,
+"name": "jump_right",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 37 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 36 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "idle_right",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 17 ), ExtResource( 35 ), ExtResource( 24 ), ExtResource( 9 ), ExtResource( 34 ), ExtResource( 13 ), ExtResource( 32 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "idle_down",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 27 ), ExtResource( 19 ), ExtResource( 8 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "idle_left",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 63 ), ExtResource( 71 ), ExtResource( 65 ) ],
+"loop": false,
+"name": "jump_up",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 69 ), ExtResource( 70 ), ExtResource( 67 ) ],
+"loop": false,
+"name": "jump_left",
+"speed": 15.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=37]
-extents = Vector2( 8, 8 )
-
 [sub_resource type="RectangleShape2D" id=32]
-extents = Vector2( 11, 2.5 )
+extents = Vector2( 12, 5.5 )
 
 [sub_resource type="AnimationNodeAnimation" id=33]
 animation = "IdleLeft"
@@ -124,6 +153,18 @@ animation = "IdleDown"
 [sub_resource type="AnimationNodeAnimation" id=36]
 animation = "IdleUp"
 
+[sub_resource type="AnimationNodeAnimation" id=64]
+animation = "IdleDown"
+
+[sub_resource type="AnimationNodeAnimation" id=65]
+animation = "IdleDown"
+
+[sub_resource type="AnimationNodeAnimation" id=66]
+animation = "IdleUp"
+
+[sub_resource type="AnimationNodeAnimation" id=67]
+animation = "IdleUp"
+
 [sub_resource type="AnimationNodeBlendSpace2D" id=12]
 blend_point_0/node = SubResource( 33 )
 blend_point_0/pos = Vector2( -1, 0 )
@@ -132,7 +173,58 @@ blend_point_1/pos = Vector2( 1, 0 )
 blend_point_2/node = SubResource( 35 )
 blend_point_2/pos = Vector2( 0, 1 )
 blend_point_3/node = SubResource( 36 )
-blend_point_3/pos = Vector2( 0, -0.9 )
+blend_point_3/pos = Vector2( 0, -1 )
+blend_point_4/node = SubResource( 64 )
+blend_point_4/pos = Vector2( -1, 1 )
+blend_point_5/node = SubResource( 65 )
+blend_point_5/pos = Vector2( 1, 1 )
+blend_point_6/node = SubResource( 66 )
+blend_point_6/pos = Vector2( -1, -1 )
+blend_point_7/node = SubResource( 67 )
+blend_point_7/pos = Vector2( 1, -1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=42]
+animation = "JumpDown"
+
+[sub_resource type="AnimationNodeAnimation" id=43]
+animation = "JumpLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=44]
+animation = "JumpRight"
+
+[sub_resource type="AnimationNodeAnimation" id=45]
+animation = "JumpUp"
+
+[sub_resource type="AnimationNodeAnimation" id=51]
+animation = "JumpDown"
+
+[sub_resource type="AnimationNodeAnimation" id=52]
+animation = "JumpDown"
+
+[sub_resource type="AnimationNodeAnimation" id=53]
+animation = "JumpUp"
+
+[sub_resource type="AnimationNodeAnimation" id=54]
+animation = "JumpUp"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=46]
+blend_point_0/node = SubResource( 42 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 43 )
+blend_point_1/pos = Vector2( -1, 0 )
+blend_point_2/node = SubResource( 44 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 45 )
+blend_point_3/pos = Vector2( 0, -1 )
+blend_point_4/node = SubResource( 51 )
+blend_point_4/pos = Vector2( -1, 1 )
+blend_point_5/node = SubResource( 52 )
+blend_point_5/pos = Vector2( 1, 1 )
+blend_point_6/node = SubResource( 53 )
+blend_point_6/pos = Vector2( -1, -1 )
+blend_point_7/node = SubResource( 54 )
+blend_point_7/pos = Vector2( 1, -1 )
 blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id=19]
@@ -182,22 +274,96 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=25]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=47]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=50]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=62]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=63]
+
 [sub_resource type="AnimationNodeStateMachine" id=13]
 states/Idle/node = SubResource( 12 )
-states/Idle/position = Vector2( 283, 87.9931 )
+states/Idle/position = Vector2( 282.111, 87.854 )
+states/Jump/node = SubResource( 46 )
+states/Jump/position = Vector2( 395.35, 220.333 )
 states/Walk/node = SubResource( 23 )
-states/Walk/position = Vector2( 504.333, 87.8888 )
-transitions = [ "Idle", "Walk", SubResource( 24 ), "Walk", "Idle", SubResource( 25 ) ]
+states/Walk/position = Vector2( 531.225, 87.5616 )
+transitions = [ "Idle", "Walk", SubResource( 24 ), "Walk", "Idle", SubResource( 25 ), "Idle", "Jump", SubResource( 47 ), "Walk", "Jump", SubResource( 50 ), "Jump", "Idle", SubResource( 62 ), "Jump", "Walk", SubResource( 63 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -74, 24 )
+graph_offset = Vector2( -34, 19 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=14]
+
+[sub_resource type="Animation" id=58]
+resource_name = "FallDown"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "fall_down" ]
+}
+
+[sub_resource type="Animation" id=59]
+resource_name = "FallLeft"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "fall_left" ]
+}
+
+[sub_resource type="Animation" id=60]
+resource_name = "FallRight"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "fall_right" ]
+}
+
+[sub_resource type="Animation" id=61]
+resource_name = "FallUp"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "fall_up" ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "IdleDown"
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/path = NodePath("PlayerSprite:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -213,7 +379,7 @@ tracks/0/keys = {
 resource_name = "IdleLeft"
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/path = NodePath("PlayerSprite:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -229,7 +395,7 @@ tracks/0/keys = {
 resource_name = "IdleRight"
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/path = NodePath("PlayerSprite:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -245,7 +411,7 @@ tracks/0/keys = {
 resource_name = "IdleUp"
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/path = NodePath("PlayerSprite:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -257,10 +423,74 @@ tracks/0/keys = {
 "values": [ "idle_up" ]
 }
 
+[sub_resource type="Animation" id=38]
+resource_name = "JumpDown"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "jump_down" ]
+}
+
+[sub_resource type="Animation" id=39]
+resource_name = "JumpLeft"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "jump_left" ]
+}
+
+[sub_resource type="Animation" id=40]
+resource_name = "JumpRight"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "jump_right" ]
+}
+
+[sub_resource type="Animation" id=41]
+resource_name = "JumpUp"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "jump_up" ]
+}
+
 [sub_resource type="Animation" id=7]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/path = NodePath("PlayerSprite:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -276,7 +506,7 @@ tracks/0/keys = {
 resource_name = "WalkDown"
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/path = NodePath("PlayerSprite:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -292,7 +522,7 @@ tracks/0/keys = {
 resource_name = "WalkLeft"
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/path = NodePath("PlayerSprite:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -308,7 +538,7 @@ tracks/0/keys = {
 resource_name = "WalkRight"
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/path = NodePath("PlayerSprite:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -324,7 +554,7 @@ tracks/0/keys = {
 resource_name = "WalkUp"
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Alundra/AlundraSprite:animation")
+tracks/0/path = NodePath("PlayerSprite:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -337,27 +567,21 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="KinematicBody2D"]
+collision_mask = 14
 script = ExtResource( 1 )
 
 [node name="ShadowSprite" type="Sprite" parent="."]
 texture = ExtResource( 62 )
 
-[node name="Alundra" type="KinematicBody2D" parent="."]
-
-[node name="AlundraSprite" type="AnimatedSprite" parent="Alundra"]
+[node name="PlayerSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle_down"
-frame = 6
+frame = 7
 playing = true
-offset = Vector2( 0, -20 )
+offset = Vector2( 0, -19 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Alundra"]
-position = Vector2( 0, -8 )
-shape = SubResource( 37 )
-disabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 2.5 )
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -0.5 )
 shape = SubResource( 32 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
@@ -365,13 +589,22 @@ tree_root = SubResource( 13 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 14 )
 parameters/Idle/blend_position = Vector2( 0, 0.1 )
-parameters/Walk/blend_position = Vector2( 0, 0 )
+parameters/Jump/blend_position = Vector2( 0, 0.1 )
+parameters/Walk/blend_position = Vector2( 0, 0.1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/FallDown = SubResource( 58 )
+anims/FallLeft = SubResource( 59 )
+anims/FallRight = SubResource( 60 )
+anims/FallUp = SubResource( 61 )
 anims/IdleDown = SubResource( 3 )
 anims/IdleLeft = SubResource( 4 )
 anims/IdleRight = SubResource( 5 )
 anims/IdleUp = SubResource( 6 )
+anims/JumpDown = SubResource( 38 )
+anims/JumpLeft = SubResource( 39 )
+anims/JumpRight = SubResource( 40 )
+anims/JumpUp = SubResource( 41 )
 anims/RESET = SubResource( 7 )
 anims/WalkDown = SubResource( 15 )
 anims/WalkLeft = SubResource( 16 )

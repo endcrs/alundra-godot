@@ -2,32 +2,35 @@ using Godot;
 using System;
 public class Player : KinematicBody2D
 {
-    //Constantes
+    // Constantes de Movimentação
     private const int ACCELERATION = 600;
     private const int MAX_SPEED = 130;
-    private const int FRICTION = 1000;
-    private const int SPEED = 80;
+    private const int FRICTION = 1200;
 
-    private const int GRAVITY = 25;
-    private const int JUMP_FORCE = -200; 
-    private Vector2 UP = new Vector2(0, -1);
-    //Variáveis
+    // Falso Eixo Z
+    public float z = 0f;
+    public int zfloor = 0;
+    private float zspeed = -2.5f;
+    private float zgrav = 0.25f;
+    private bool zjump = false;
+
+    // Variaveis
     private Vector2 motion = new Vector2(0, 0);
-    private Vector2 input_vector = new Vector2(0, 0);
+    public Vector2 Axis = new Vector2(0, 0);
+    private float scaleShadow = 1f;
+    private int altMax = 50;
 
 
-    private int z = 0;
-    private int velz = 0;
-    private Vector2 AlundraMotion;
-
-    //Nodes
-    private KinematicBody2D Alundra;
+    // Nodes
+    public AnimatedSprite PlayerSprite;
+    private Sprite ShadowSprite;
     private AnimationTree AnimTree;
     private AnimationNodeStateMachinePlayback AnimState; 
 
     public override void _Ready()
     {
-        Alundra = GetNode<KinematicBody2D>("Alundra");
+        PlayerSprite = GetNode<AnimatedSprite>("PlayerSprite");
+        ShadowSprite = GetNode<Sprite>("ShadowSprite");
         AnimTree = GetNode<AnimationTree>("AnimationTree");
         AnimState = (AnimationNodeStateMachinePlayback)AnimTree.Get("parameters/playback");
         AnimTree.Active = true;
@@ -37,6 +40,7 @@ public class Player : KinematicBody2D
     {
         base._PhysicsProcess(delta);
 
+        //GD.Print("Posição do Sprite: " + PlayerSprite.Position.y);
         Jump();
         Movement(delta);
         Move();
@@ -46,61 +50,88 @@ public class Player : KinematicBody2D
     {
         base._Input(@event);
 
-        // Player Pula
-        if (Alundra.Position.y == 0)
-        {   
-            if (@event.IsActionPressed("ui_jump"))
+
+        if (@event.IsActionPressed("ui_jump"))
+        {
+            if (z <= zfloor)
             {
-                velz = JUMP_FORCE; 
+                zjump = true;
             }
-        }
-    }
-
-    public void Movement(float delta)
-    {
-        input_vector.x = Input.GetActionStrength("ui_right") - Input.GetActionStrength("ui_left");
-        input_vector.y = Input.GetActionStrength("ui_down") - Input.GetActionStrength("ui_up");
-        input_vector = input_vector.Normalized();
-
-        //Verifica se o Player está em movimento
-        if (input_vector != new Vector2(0, 0)) 
-        {
-            AnimTree.Set("parameters/Idle/blend_position", input_vector);
-            AnimTree.Set("parameters/Walk/blend_position", input_vector);
-            AnimState.Travel("Walk");
-            motion = motion.MoveToward(input_vector * MAX_SPEED, ACCELERATION * delta);
-        } 
-        else 
-        {
-            AnimState.Travel("Idle");
-            motion = motion.MoveToward(new Vector2(0, 0), FRICTION * delta);
         }
     }
 
     public void Jump()
     {
-        z = velz;
-        AlundraMotion = new Vector2(0, 0 + z);
-
-        // Aplica gravidade caso o player esteja pulando  
-        if (Alundra.Position.y < 0){
-            velz += GRAVITY;
-        }
-        
-        // Verifica se o player está no chão
-        if (Alundra.Position.y > 0)
+        if (zjump == true)
         {
-            velz = 0;
-            z = 0;
-            AlundraMotion = new Vector2(0, 0 + z);  
-            Alundra.Position = new Vector2(0,  0);
+            z += zspeed;
+        }
+        if (z != zfloor)
+        {
+            z += zgrav;
+            zgrav += 0.2f;
         }
 
+        if (z + zspeed >= zfloor)
+        {
+            z = zfloor;
+            zgrav = 0;
+            PlayerSprite.Position = new Vector2(0, zfloor);
+            zjump = false;
+        }
+
+        // Posição do Sprite do jogador 
+        PlayerSprite.Position = new Vector2((GlobalPosition.x - Position.x), (GlobalPosition.y - Position.y) + z);
+
+        GD.Print("SpritePos: " + PlayerSprite.Position + " PlayerPos" + Position);
+    }
+
+    public void Movement(float delta)
+    {
+        // Verifica se o Player está em movimento
+        if (GetInputAxis() != new Vector2(0, 0)) 
+        {
+            AnimTree.Set("parameters/Idle/blend_position", GetInputAxis());
+            AnimTree.Set("parameters/Walk/blend_position", GetInputAxis());
+            AnimTree.Set("parameters/Jump/blend_position", GetInputAxis());
+            AnimTree.Set("parameters/Fall/blend_position", GetInputAxis());
+            AnimState.Travel("Walk");
+            motion = motion.MoveToward(GetInputAxis() * MAX_SPEED, ACCELERATION * delta);
+        }
+        // Verifica se o Player está parado 
+        else 
+        {
+            AnimState.Travel("Idle");
+            motion = motion.MoveToward(new Vector2(0, 0), FRICTION * delta);
+        }
+
+        // Verifica se o player está pulando
+        if (zjump == true)
+        {
+            AnimState.Travel("Jump");
+        }
+
+        Shadow();
+    }
+
+    public void Shadow()
+    {
+        ShadowSprite.Scale = new Vector2(scaleShadow, scaleShadow);
+        scaleShadow = 1 - (Math.Abs(PlayerSprite.Position.y - zfloor)/altMax);
+        ShadowSprite.Modulate =  Color.ColorN("White", scaleShadow);
+        ShadowSprite.Position = new Vector2(0, 0 + zfloor);
+    }
+
+    public Vector2 GetInputAxis()
+    {
+        Axis.x = Input.GetActionStrength("ui_right") - Input.GetActionStrength("ui_left");
+        Axis.y = Input.GetActionStrength("ui_down") - Input.GetActionStrength("ui_up");
+        Axis = Axis.Normalized();
+        return Axis;
     }
 
     public void Move()
     {
-        motion = MoveAndSlide(motion, UP);
-        AlundraMotion = Alundra.MoveAndSlide(AlundraMotion, UP);
+        motion = MoveAndSlide(motion);
     }
 }
