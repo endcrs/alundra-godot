@@ -1,14 +1,75 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://block/Block.tscn" type="PackedScene" id=2]
+[ext_resource path="res://block/Block16px.tscn" type="PackedScene" id=2]
+[ext_resource path="res://block/Block32px.tscn" type="PackedScene" id=3]
+[ext_resource path="res://tilesets/sprites/background.png" type="Texture" id=4]
+
+[sub_resource type="TileSet" id=1]
 
 [node name="World" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="Background" type="Sprite" parent="."]
+z_index = -5
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 432, 256 )
 
 [node name="Plataform" type="YSort" parent="."]
 
 [node name="Player" parent="Plataform" instance=ExtResource( 1 )]
-position = Vector2( 209, 121 )
+position = Vector2( 176, 192 )
 
-[node name="Block" parent="Plataform" instance=ExtResource( 2 )]
-position = Vector2( 71, 109 )
+[node name="Block32px" parent="Plataform" instance=ExtResource( 3 )]
+position = Vector2( 192, 128 )
+
+[node name="Block32px2" parent="Plataform" instance=ExtResource( 3 )]
+position = Vector2( 208, 144 )
+
+[node name="Block32px3" parent="Plataform" instance=ExtResource( 3 )]
+position = Vector2( 208, 128 )
+
+[node name="Block32px4" parent="Plataform" instance=ExtResource( 3 )]
+position = Vector2( 192, 144 )
+
+[node name="Block32px5" parent="Plataform" instance=ExtResource( 3 )]
+position = Vector2( 224, 80 )
+
+[node name="Block32px6" parent="Plataform" instance=ExtResource( 3 )]
+position = Vector2( 240, 80 )
+
+[node name="Block32px7" parent="Plataform" instance=ExtResource( 3 )]
+position = Vector2( 240, 96 )
+
+[node name="Block32px8" parent="Plataform" instance=ExtResource( 3 )]
+position = Vector2( 224, 96 )
+
+[node name="Block16px" parent="Plataform" instance=ExtResource( 2 )]
+position = Vector2( 224, 128 )
+
+[node name="Block16px2" parent="Plataform" instance=ExtResource( 2 )]
+position = Vector2( 224, 144 )
+
+[node name="Block16px3" parent="Plataform" instance=ExtResource( 2 )]
+position = Vector2( 160, 144 )
+
+[node name="Block16px4" parent="Plataform" instance=ExtResource( 2 )]
+position = Vector2( 240, 112 )
+
+[node name="Block16px5" parent="Plataform" instance=ExtResource( 2 )]
+position = Vector2( 240, 128 )
+
+[node name="Block16px6" parent="Plataform" instance=ExtResource( 2 )]
+position = Vector2( 240, 144 )
+
+[node name="Block16px7" parent="Plataform" instance=ExtResource( 2 )]
+position = Vector2( 176, 144 )
+
+[node name="Block16px8" parent="Plataform" instance=ExtResource( 2 )]
+position = Vector2( 288, 128 )
